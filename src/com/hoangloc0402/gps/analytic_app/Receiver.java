@@ -24,7 +24,7 @@ public class Receiver implements MqttCallback, IMqttActionListener {
     protected IMqttToken subscribeToken;
 
     public Receiver(String name) { this.name = name; }
-
+//cmthihi
     public String getName() { return name; }
 
     public void connect() {
