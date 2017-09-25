@@ -12,7 +12,7 @@ public class AnalyticApp {
 				try {
 					Thread.sleep(2000);
 
-					//System.out.println("hihi");
+
 				}
 				catch (Exception e) {
 					e.printStackTrace();

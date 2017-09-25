@@ -37,7 +37,7 @@ public class Receiver implements MqttCallback, IMqttActionListener {
             memoryPersistence = new MemoryPersistence();
             clientId = MqttAsyncClient.generateClientId();
             client = new MqttAsyncClient(MqttServerURL, clientId, memoryPersistence);
-            // I want to use this instance as the callback
+
             client.setCallback(this);
             connectToken = client.connect(options, null, this);
         }
@@ -84,7 +84,6 @@ public class Receiver implements MqttCallback, IMqttActionListener {
 
     @Override
     public void onFailure(IMqttToken asyncActionToken, Throwable exception) {
-        // The method will run if an operation failed
         exception.printStackTrace();
     }
 
