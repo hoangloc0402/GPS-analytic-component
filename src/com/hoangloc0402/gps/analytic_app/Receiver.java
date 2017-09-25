@@ -18,7 +18,7 @@ public class Receiver implements MqttCallback, IMqttActionListener {
     protected LinkedList<String> ReceiverQueue = new LinkedList<>();
     protected String name;
     protected String clientId;
-    protected MqttAsyncClient client;//bao
+    protected MqttAsyncClient client;
     protected MemoryPersistence memoryPersistence;
     protected IMqttToken connectToken;
     protected IMqttToken subscribeToken;
