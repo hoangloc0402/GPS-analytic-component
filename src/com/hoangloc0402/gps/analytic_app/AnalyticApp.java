@@ -8,6 +8,7 @@ import java.io.InputStreamReader;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Dictionary;
+import java.util.Map;
 
 public class AnalyticApp {
 	public static void main(String[] args) throws Exception{
@@ -17,10 +18,11 @@ public class AnalyticApp {
 
 		System.out.println("Server in running at port: "+port);
 		ServerSocket welcomeSocket = new ServerSocket(port);
+
 		try {
 			while(true) {
 				Socket connectionSocket = welcomeSocket.accept();
-				HandleDataThread h = new HandleDataThread(connectionSocket);
+				HandleDataThread h = new HandleDataThread(connectionSocket,receiver);
 				h.start();
 			}
 		}

@@ -2,9 +2,12 @@ package com.hoangloc0402.gps.analytic_app;
 
 import org.eclipse.paho.client.mqttv3.*;
 import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
+import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
+import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Map;
 
 public class Receiver implements MqttCallback, IMqttActionListener {
     public static final String MqttUserName = "zvzzpcnw";
@@ -15,7 +18,7 @@ public class Receiver implements MqttCallback, IMqttActionListener {
     public static final String ENCODING = "UTF-8";
     public static final int QUALITY_OF_SERVICE = 2;
 
-    protected LinkedList<String> ReceiverQueue = new LinkedList<>();
+    protected Map<Integer,String> ReceiverStorage = new HashMap<>();
     protected String name;
     protected String clientId;
     protected MqttAsyncClient client;
@@ -50,14 +53,7 @@ public class Receiver implements MqttCallback, IMqttActionListener {
         return (client != null) && (client.isConnected());
     }
 
-    public void addMessage(String msg){
-        ReceiverQueue.addLast(msg);
-    }
 
-    public String getMessage(){
-        if (ReceiverQueue.isEmpty()) return "";
-        else return ReceiverQueue.poll();
-    }
 
     @Override
     public void connectionLost(Throwable cause) {
@@ -96,11 +92,21 @@ public class Receiver implements MqttCallback, IMqttActionListener {
         }
 
         String messageText = new String(message.getPayload(), ENCODING);
-        ReceiverQueue.add(messageText);
+        storeMessage(messageText);//add message to map
         System.out.println( String.format("%s received %s: %s", name, topic, messageText));
         String[] keyValue = messageText.split(":");
         if (keyValue.length != 3) {
             return;
+        }
+    }
+    private void storeMessage(String message) {
+        try {
+            JSONObject jo = new JSONObject(message);
+            Integer id = jo.getInt("id");
+            ReceiverStorage.put(id, message);
+        }
+        catch (Exception e){
+            System.out.println(e.getMessage());
         }
     }
 
