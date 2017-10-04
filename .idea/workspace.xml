@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dc53d122-36a0-43c5-8ca4-dbe4766cd3b7" name="Default" comment="add json library">
+    <list default="true" id="dc53d122-36a0-43c5-8ca4-dbe4766cd3b7" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/org_json_json_20170516.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.classpath" afterPath="$PROJECT_DIR$/.classpath" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hoangloc0402/gps/analytic_app/AnalyticApp.java" afterPath="$PROJECT_DIR$/src/com/hoangloc0402/gps/analytic_app/AnalyticApp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hoangloc0402/gps/analytic_app/HandleDataThread.java" afterPath="$PROJECT_DIR$/src/com/hoangloc0402/gps/analytic_app/HandleDataThread.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hoangloc0402/gps/analytic_app/Receiver.java" afterPath="$PROJECT_DIR$/src/com/hoangloc0402/gps/analytic_app/Receiver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.project" afterPath="$PROJECT_DIR$/.project" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AnalyticApp.eml" afterPath="$PROJECT_DIR$/AnalyticApp.eml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,7 +26,7 @@
       <file leaf-file-name="AnalyticApp.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hoangloc0402/gps/analytic_app/AnalyticApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
+            <state relative-caret-position="0">
               <caret line="24" column="26" lean-forward="false" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -37,8 +38,8 @@
       <file leaf-file-name="HandleDataThread.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/hoangloc0402/gps/analytic_app/HandleDataThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="39" column="47" lean-forward="true" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="47" />
+            <state relative-caret-position="203">
+              <caret line="33" column="12" lean-forward="false" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -49,8 +50,8 @@
       <file leaf-file-name="Receiver.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/hoangloc0402/gps/analytic_app/Receiver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="106" column="9" lean-forward="true" selection-start-line="106" selection-start-column="9" selection-end-line="106" selection-end-column="9" />
+            <state relative-caret-position="1581">
+              <caret line="106" column="9" lean-forward="false" selection-start-line="106" selection-start-column="9" selection-end-line="106" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -135,30 +136,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView">
-        <subPane>
-          <expand>
-            <path>
-              <item name="GPS_AnalyticApp" type="1abcf292:AndroidViewProjectNode" />
-              <item name="AnalyticApp" type="1039202d:NonAndroidModuleNode" />
-            </path>
-            <path>
-              <item name="GPS_AnalyticApp" type="1abcf292:AndroidViewProjectNode" />
-              <item name="AnalyticApp" type="1039202d:NonAndroidModuleNode" />
-              <item name="java" type="b5c1fe26:NonAndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="GPS_AnalyticApp" type="1abcf292:AndroidViewProjectNode" />
-              <item name="AnalyticApp" type="1039202d:NonAndroidModuleNode" />
-              <item name="java" type="b5c1fe26:NonAndroidSourceTypeNode" />
-              <item name="analytic_app" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -196,12 +175,34 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="GPS_AnalyticApp" type="1abcf292:AndroidViewProjectNode" />
+              <item name="AnalyticApp" type="1039202d:NonAndroidModuleNode" />
+            </path>
+            <path>
+              <item name="GPS_AnalyticApp" type="1abcf292:AndroidViewProjectNode" />
+              <item name="AnalyticApp" type="1039202d:NonAndroidModuleNode" />
+              <item name="java" type="b5c1fe26:NonAndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="GPS_AnalyticApp" type="1abcf292:AndroidViewProjectNode" />
+              <item name="AnalyticApp" type="1039202d:NonAndroidModuleNode" />
+              <item name="java" type="b5c1fe26:NonAndroidSourceTypeNode" />
+              <item name="analytic_app" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
@@ -365,7 +366,8 @@
       <workItem from="1506430587322" duration="3273000" />
       <workItem from="1506588334900" duration="2634000" />
       <workItem from="1506741079190" duration="3124000" />
-      <workItem from="1506764564014" duration="8580000" />
+      <workItem from="1506764564014" duration="8635000" />
+      <workItem from="1507082568429" duration="252000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1506274248973</created>
@@ -409,11 +411,18 @@
       <option name="project" value="LOCAL" />
       <updated>1506743187546</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add json handler">
+      <created>1506777106372</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1506777106372</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21606000" />
+    <option name="totallyTimeSpent" value="21913000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -422,18 +431,17 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Tool Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23026316" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2831424" sideWeight="0.52118003" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36988544" sideWeight="0.47881997" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36988544" sideWeight="0.47881997" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22012103" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22314675" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="ANTLR Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -447,6 +455,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23026316" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -500,7 +509,8 @@
     <MESSAGE value="delete Bao cmt" />
     <MESSAGE value="multithreading" />
     <MESSAGE value="add json library" />
-    <option name="LAST_COMMIT_MESSAGE" value="add json library" />
+    <MESSAGE value="add json handler" />
+    <option name="LAST_COMMIT_MESSAGE" value="add json handler" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -517,7 +527,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/mqtt/messaging/MqttSample01.java" />
     <entry file="file://$PROJECT_DIR$/src/com/mqtt/messaging/Receiver.java" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -684,26 +693,10 @@
     <entry file="file://$PROJECT_DIR$/src/com/mqtt/messaging/Publisher.java" />
     <entry file="file://$PROJECT_DIR$/src/com/mqtt/messaging/MqttSample01.java" />
     <entry file="file://$PROJECT_DIR$/src/com/mqtt/messaging/Receiver.java" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="36" lean-forward="true" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AnalyticApp.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/jdk1.8/src.zip!/java/util/Timer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="385">
           <caret line="554" column="0" lean-forward="false" selection-start-line="554" selection-start-column="0" selection-end-line="554" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -717,15 +710,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hoangloc0402/gps/analytic_app/Receiver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="106" column="9" lean-forward="true" selection-start-line="106" selection-start-column="9" selection-end-line="106" selection-end-column="9" />
+        <state relative-caret-position="1581">
+          <caret line="106" column="9" lean-forward="false" selection-start-line="106" selection-start-column="9" selection-end-line="106" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hoangloc0402/gps/analytic_app/AnalyticApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
+        <state relative-caret-position="0">
           <caret line="24" column="26" lean-forward="false" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -733,10 +726,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="43" lean-forward="false" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AnalyticApp.eml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="44" lean-forward="false" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AnalyticApp.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hoangloc0402/gps/analytic_app/HandleDataThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="39" column="47" lean-forward="true" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="47" />
+        <state relative-caret-position="203">
+          <caret line="33" column="12" lean-forward="false" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -820,7 +837,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.1.0</last-edited>
+          <last-edited>org.json:json:20170516</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

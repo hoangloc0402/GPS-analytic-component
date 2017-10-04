@@ -4,10 +4,8 @@
 	<contentEntry url="file://$MODULE_DIR$">
 		<excludeFolder url="file://$MODULE_DIR$/target"/>
 	</contentEntry>
-	<lib name="java-json.jar" scope="COMPILE">
-		<srcroot url="jar://D:/Compressed/java-json.jar!/"/>
-	</lib>
 	<levels>
 		<level name="Maven: org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.1.0" value="project"/>
+		<level name="org.json:json:20170516" value="project"/>
 	</levels>
 </component>
