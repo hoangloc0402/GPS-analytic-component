@@ -1,6 +1,6 @@
 package com.hoangloc0402.gps.analytic_app;
 
-import org.json.JSONObject;
+import org.json.*;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
@@ -12,10 +12,8 @@ import java.util.Map;
 
 public class HandleDataThread extends Thread {
     private Socket connectionSocket;
-    private Receiver receiver;
-    public HandleDataThread(Socket connectionSocket, Receiver receiver){
+    public HandleDataThread(Socket connectionSocket){
         this.connectionSocket = connectionSocket;
-        this.receiver = receiver;
     }
     @Override
     public void run() {
@@ -34,15 +32,23 @@ public class HandleDataThread extends Thread {
             e.printStackTrace();
         }
     }
-    private String handle(String message) throws Exception{
-        JSONObject jo = new JSONObject(message);
-        String request =jo.getString("request");
-        if(request.equals("friend_location")) {
-            JSONObject sendJO = new JSONObject();
-            sendJO.put("list",receiver.ReceiverStorage);
-            return  sendJO.toString();
+    private String handle(String message){
+        try {
+            JSONObject jo = new JSONObject(message);
+            String request = jo.getString("request");
+            System.out.println(request);
+            if (request.equals("friend_location")) {
+                JSONObject sendJO = new JSONObject();
+                synchronized (AnalyticApp.hashMap) {
+                    sendJO.put("list", AnalyticApp.hashMap);
+                }
+                return sendJO.toString();
+            } else return "Error";
         }
-        else return "Error";
+        catch (Exception e){
+            //System.out.println("WRONG MESSAGE: "+message);
+            return "Error";
+        }
     }
 
 }

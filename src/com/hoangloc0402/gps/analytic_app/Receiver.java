@@ -2,7 +2,7 @@ package com.hoangloc0402.gps.analytic_app;
 
 import org.eclipse.paho.client.mqttv3.*;
 import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
-import org.json.JSONObject;
+import org.json.*;
 
 import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
@@ -10,21 +10,20 @@ import java.util.LinkedList;
 import java.util.Map;
 
 public class Receiver implements MqttCallback, IMqttActionListener {
-    public static final String MqttUserName = "zvzzpcnw";
-    public static final String MqttPassword = "NAcTd5BI5Sfu";
-    public static final String MqttServerURL = "tcp://m20.cloudmqtt.com:11297";
+    private static final String MqttUserName = "tedfdjcr";
+    private static final String MqttPassword = "yoH3kIKmjikr";
+    private static final String MqttServerURL = "tcp://m13.cloudmqtt.com:19122";
 
-    public static final String TOPIC = "AssignmentNetworking";
-    public static final String ENCODING = "UTF-8";
-    public static final int QUALITY_OF_SERVICE = 2;
+    private static final String TOPIC = "AssignmentNetworking";
+    private static final String ENCODING = "UTF-8";
+    private static final int QUALITY_OF_SERVICE = 2;
 
-    protected Map<Integer,String> ReceiverStorage = new HashMap<>();
-    protected String name;
-    protected String clientId;
-    protected MqttAsyncClient client;
-    protected MemoryPersistence memoryPersistence;
-    protected IMqttToken connectToken;
-    protected IMqttToken subscribeToken;
+    private String name;
+    private String clientId;
+    public MqttAsyncClient client;
+    private MemoryPersistence memoryPersistence;
+    private IMqttToken connectToken;
+    private IMqttToken subscribeToken;
 
     public Receiver(String name) { this.name = name; }
 
@@ -103,7 +102,9 @@ public class Receiver implements MqttCallback, IMqttActionListener {
         try {
             JSONObject jo = new JSONObject(message);
             Integer id = jo.getInt("id");
-            ReceiverStorage.put(id, message);
+            synchronized (AnalyticApp.hashMap) {
+                AnalyticApp.hashMap.put(id, jo);
+            }
         }
         catch (Exception e){
             System.out.println(e.getMessage());

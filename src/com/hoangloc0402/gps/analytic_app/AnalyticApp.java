@@ -1,20 +1,32 @@
 package com.hoangloc0402.gps.analytic_app;
 
 import org.eclipse.paho.client.mqttv3.MqttException;
+import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.InputStreamReader;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Calendar;
 import java.util.Dictionary;
+import java.util.HashMap;
 import java.util.Map;
 
 public class AnalyticApp {
+	public static HashMap<Integer,JSONObject> hashMap = new HashMap<>();
 	public static void main(String[] args) throws Exception{
 		int port = 5555;
 		Receiver receiver = new Receiver("[Receiver]");
 		receiver.connect();
+		//long curT = Calendar.getInstance().getTimeInMillis();
+//		for (int i=0;i<30;i++){
+//			hashMap.put(i,
+//					new JSONObject().put("time",curT+i*1000).put("id",i)
+//			);
+//		}
+//		FilterDataThread f = new FilterDataThread();
+//		f.start();
 
 		System.out.println("Server in running at port: "+port);
 		ServerSocket welcomeSocket = new ServerSocket(port);
@@ -22,7 +34,7 @@ public class AnalyticApp {
 		try {
 			while(true) {
 				Socket connectionSocket = welcomeSocket.accept();
-				HandleDataThread h = new HandleDataThread(connectionSocket,receiver);
+				HandleDataThread h = new HandleDataThread(connectionSocket);
 				h.start();
 			}
 		}
