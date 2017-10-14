@@ -19,14 +19,15 @@ public class AnalyticApp {
 		int port = 5555;
 		Receiver receiver = new Receiver("[Receiver]");
 		receiver.connect();
-		//long curT = Calendar.getInstance().getTimeInMillis();
-//		for (int i=0;i<30;i++){
-//			hashMap.put(i,
-//					new JSONObject().put("time",curT+i*1000).put("id",i)
-//			);
-//		}
-//		FilterDataThread f = new FilterDataThread();
-//		f.start();
+		long curT = Calendar.getInstance().getTimeInMillis();
+		for (int i=0;i<30;i++){//testing
+			hashMap.put(i,
+					new JSONObject().put("time",curT+i*1000).put("id",i).put("name","Bao "+i)
+							.put("lat",10+i).put("long",10+i)
+			);
+		}
+		FilterDataThread f = new FilterDataThread();
+		f.start();
 
 		System.out.println("Server in running at port: "+port);
 		ServerSocket welcomeSocket = new ServerSocket(port);

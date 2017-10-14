@@ -1,5 +1,7 @@
 package com.hoangloc0402.gps.analytic_app;
 
+import org.json.JSONObject;
+
 import java.util.Calendar;
 
 public class FilterDataThread extends Thread {
@@ -20,6 +22,7 @@ public class FilterDataThread extends Thread {
                             x -> currentTime - x.getValue().getLong("time") > offlineTime
                     );
                     AnalyticApp.hashMap.forEach((x,y) -> System.out.println(x+" "+y));
+
                 }
             }
             catch (Exception e){
