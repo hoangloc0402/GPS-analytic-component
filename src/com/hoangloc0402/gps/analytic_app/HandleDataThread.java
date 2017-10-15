@@ -7,6 +7,7 @@ import java.io.DataOutputStream;
 import java.io.InputStreamReader;
 import java.net.Socket;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -36,17 +37,20 @@ public class HandleDataThread extends Thread {
         try {
             JSONObject jo = new JSONObject(message);
             String request = jo.getString("request");
+            int id = jo.getInt("id");
             System.out.println(request);
             if (request.equals("friend_location")) {
                 JSONObject sendJO = new JSONObject();
                 synchronized (AnalyticApp.hashMap) {
-                    sendJO.put("list", AnalyticApp.hashMap);
+                    HashMap<Integer,JSONObject> h = new HashMap<>(AnalyticApp.hashMap);
+                    h.entrySet().removeIf(x -> x.getValue().getInt("id") == id);
+                    sendJO.put("list", h);
                 }
                 return sendJO.toString();
             } else return "Error";
         }
         catch (Exception e){
-            //System.out.println("WRONG MESSAGE: "+message);
+            System.out.println(e.getMessage());
             return "Error";
         }
     }
