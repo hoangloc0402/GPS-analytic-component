@@ -35,15 +35,17 @@ public class HandleDataThread extends Thread {
     }
     private String handle(String message){
         try {
+            System.out.println("REQUEST:"+message);
             JSONObject jo = new JSONObject(message);
             String request = jo.getString("request");
-            int id = jo.getInt("id");
+            String id = jo.getString("id");
             System.out.println(request);
             if (request.equals("friend_location")) {
                 JSONObject sendJO = new JSONObject();
                 synchronized (AnalyticApp.hashMap) {
-                    HashMap<Integer,JSONObject> h = new HashMap<>(AnalyticApp.hashMap);
-                    h.entrySet().removeIf(x -> x.getValue().getInt("id") == id);
+                    HashMap<String,JSONObject> h = new HashMap<>(AnalyticApp.hashMap);
+                    h.entrySet().removeIf(x -> x.getKey().equals(id));
+                    System.out.println(h);
                     sendJO.put("list", h);
                 }
                 return sendJO.toString();

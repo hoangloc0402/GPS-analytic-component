@@ -14,14 +14,16 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class AnalyticApp {
-	public static HashMap<Integer,JSONObject> hashMap = new HashMap<>();
+	public static HashMap<String,JSONObject> hashMap = new HashMap<>();
 	public static void main(String[] args) throws Exception{
-		int port = 5555;
+		int port = 6666;
 		Receiver receiver = new Receiver("[Receiver]");
 		receiver.connect();
 		long curT = Calendar.getInstance().getTimeInMillis();
 		for (int i=0;i<30;i++){//testing
-			hashMap.put(i,
+			String s;
+			s=""+i;
+			hashMap.put(s,
 					new JSONObject().put("time",curT+i*1000).put("id",i).put("name","Bao "+i)
 							.put("lat",10+i).put("long",10+i)
 			);

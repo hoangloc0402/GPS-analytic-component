@@ -101,7 +101,7 @@ public class Receiver implements MqttCallback, IMqttActionListener {
     private void storeMessage(String message) {
         try {
             JSONObject jo = new JSONObject(message);
-            Integer id = jo.getInt("id");
+            String id = jo.getString("id");
             synchronized (AnalyticApp.hashMap) {
                 AnalyticApp.hashMap.put(id, jo);
             }
