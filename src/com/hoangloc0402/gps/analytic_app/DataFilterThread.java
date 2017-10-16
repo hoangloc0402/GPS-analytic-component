@@ -4,10 +4,10 @@ import org.json.JSONObject;
 
 import java.util.Calendar;
 
-public class FilterDataThread extends Thread {
+public class DataFilterThread extends Thread {
     private long currentTime;
     private final int offlineTime = 20000;
-    public FilterDataThread(){
+    public DataFilterThread(){
 
     }
     @Override
@@ -16,12 +16,11 @@ public class FilterDataThread extends Thread {
             try {
                 Thread.sleep(1000);
                 currentTime = Calendar.getInstance().getTimeInMillis();
-                System.out.println("CurreTime:"+currentTime);
                 synchronized (AnalyticApp.hashMap){
                     AnalyticApp.hashMap.entrySet().removeIf(
                             x -> currentTime - x.getValue().getLong("time") > offlineTime
                     );
-                    AnalyticApp.hashMap.forEach((x,y) -> System.out.println(x+" "+y));
+                    //AnalyticApp.hashMap.forEach((x,y) -> System.out.println(x+" "+y));
 
                 }
             }

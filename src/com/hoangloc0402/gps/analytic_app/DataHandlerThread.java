@@ -11,9 +11,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class HandleDataThread extends Thread {
+public class DataHandlerThread extends Thread {
     private Socket connectionSocket;
-    public HandleDataThread(Socket connectionSocket){
+    public DataHandlerThread(Socket connectionSocket){
         this.connectionSocket = connectionSocket;
     }
     @Override
@@ -39,13 +39,12 @@ public class HandleDataThread extends Thread {
             JSONObject jo = new JSONObject(message);
             String request = jo.getString("request");
             String id = jo.getString("id");
-            System.out.println(request);
             if (request.equals("friend_location")) {
                 JSONObject sendJO = new JSONObject();
                 synchronized (AnalyticApp.hashMap) {
                     HashMap<String,JSONObject> h = new HashMap<>(AnalyticApp.hashMap);
                     h.entrySet().removeIf(x -> x.getKey().equals(id));
-                    System.out.println(h);
+                    //System.out.println(h);
                     sendJO.put("list", h);
                 }
                 return sendJO.toString();
