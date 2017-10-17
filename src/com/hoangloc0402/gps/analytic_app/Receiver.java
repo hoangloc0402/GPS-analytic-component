@@ -100,11 +100,12 @@ public class Receiver implements MqttCallback, IMqttActionListener {
     }
     private void storeMessage(String message) {
         try {
-            JSONArray joList = new JSONObject(message).getJSONArray("list");
+            JSONObject joList = new JSONObject(message).getJSONObject("list");
+            JSONArray a = joList.names();
             synchronized (AnalyticApp.hashMap) {
                 for (int i = 0; i < joList.length(); i++) {
-                    JSONObject jsonObject = (JSONObject) joList.get(i);
-                    AnalyticApp.hashMap.put(jsonObject.getString("id"), jsonObject);
+                    JSONObject jsonObject = joList.getJSONObject(a.getString(i));
+                    AnalyticApp.hashMap.put(jsonObject.getString("id"),jsonObject);
                 }
             }
 
